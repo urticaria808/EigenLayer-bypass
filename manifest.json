@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "EigenLayer绕过 x.com/noosuture",
+  "version": "1.0",
+  "permissions": [
+    "declarativeNetRequest",
+    "declarativeNetRequestFeedback"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "host_permissions": [
+    "https://claims.eigenfoundation.org/*"
+  ],
+  "declarative_net_request": {
+    "rule_resources": [{
+      "id": "ruleset_1",
+      "enabled": true,
+      "path": "rules.json"
+    }]
+  }
+}
